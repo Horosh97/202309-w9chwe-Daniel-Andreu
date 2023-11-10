@@ -6,9 +6,11 @@ const mainTheme: DefaultTheme = {
     fontFamily: "'Signika Variable', sans-serif",
   },
   colors: {
-    mainColor: "#fff",
-    secondaryColor: "#fff",
-    backgroundColor: "#fff",
+    lightColor: "#fff",
+    darkColor: "#30343F",
+    mainColor: "#00B4F5",
+    secondaryColor: "#596475",
+    accentColor: "#EC058E",
   },
 };
 

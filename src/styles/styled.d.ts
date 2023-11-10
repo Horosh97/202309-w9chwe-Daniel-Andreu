@@ -7,9 +7,11 @@ declare module "styled-components" {
       fontFamily: string;
     };
     colors: {
-      mainColor: string;
+      lightColor: string;
+      darkColor: string;
       secondaryColor: string;
-      backgroundColor: string;
+      mainColor: string;
+      accentColor: string;
     };
   }
 }
