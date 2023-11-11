@@ -1,4 +1,5 @@
 import { useAppSelector } from "../../store/hooks";
+import UserCard from "../UserCard/UserCard";
 
 const UsersList = (): React.ReactElement => {
   const users = useAppSelector((state) => {
@@ -6,13 +7,13 @@ const UsersList = (): React.ReactElement => {
   });
 
   return (
-    <div>
+    <ul>
       {users.map((user) => (
         <li key={user.id}>
-          <div />
+          <UserCard user={user} />
         </li>
       ))}
-    </div>
+    </ul>
   );
 };
 export default UsersList;
