@@ -5,7 +5,7 @@ export interface UserStructureWithoutId {
   quote: string;
   profilePicture: string;
   isFriend: boolean;
-  interest: string[];
+  interests: string[];
 }
 
 export interface UserStructure extends UserStructureWithoutId {
