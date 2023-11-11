@@ -7,8 +7,8 @@ const App = (): React.ReactElement => {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/" element={<Navigate to="/inicio" />} />
+        <Route path="/inicio" element={<HomePage />} />
       </Routes>
     </>
   );
