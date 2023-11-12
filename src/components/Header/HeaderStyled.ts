@@ -10,7 +10,7 @@ const HeaderStyled = styled.header`
   box-shadow: 0 1px 25px ${({ theme }) => theme.colors.darkColor};
   .header {
     &__title {
-      margin: 10px;
+      margin: 16px;
       font-family: ${({ theme }) => theme.typography.fontFamily};
       color: ${({ theme }) => theme.colors.lightColor};
       text-shadow: 0.1px 0.1px 10px
@@ -18,6 +18,7 @@ const HeaderStyled = styled.header`
       text-transform: capitalize;
       font-weight: 600;
       font-size: 2rem;
+      letter-spacing: 1px;
     }
   }
 `;

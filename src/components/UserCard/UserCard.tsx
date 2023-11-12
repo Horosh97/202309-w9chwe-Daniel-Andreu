@@ -12,8 +12,10 @@ const UserCard = ({
     <UserCardStyled className="user">
       <div className="user__left-container">
         <img className="user__image" src={profilePicture} alt={username} />
-        <h2 className="user__name">{name}</h2>
-        <h3 className="user__username">{username}</h3>
+        <div className="user__info">
+          <h2 className="user__name">{name}</h2>
+          <h3 className="user__username">{username}</h3>
+        </div>
       </div>
       <div className="user__right-container">
         <div className="user__state">
