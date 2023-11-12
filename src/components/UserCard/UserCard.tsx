@@ -1,4 +1,5 @@
 import { UserStructure } from "../../store/features/users/types";
+import UserCardStyled from "./UserCardStyled";
 
 interface UserCardProps {
   user: UserStructure;
@@ -8,7 +9,7 @@ const UserCard = ({
   user: { name, username, birthday, quote, profilePicture, interests },
 }: UserCardProps): React.ReactElement => {
   return (
-    <article className="user">
+    <UserCardStyled className="user">
       <div className="user__left-container">
         <img className="user__image" src={profilePicture} alt={username} />
         <h2 className="user__name">{name}</h2>
@@ -28,7 +29,7 @@ const UserCard = ({
           <span className="user__birthday-info">{birthday}</span>
         </div>
       </div>
-    </article>
+    </UserCardStyled>
   );
 };
 

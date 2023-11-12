@@ -3,6 +3,7 @@ import useUsersApi from "../../hooks/useUsersApi";
 import { useAppDispatch } from "../../store/hooks";
 import { loadUsersActionCreator } from "../../store/features/users/usersSlice";
 import UsersList from "../../components/UsersList/UsersList";
+import HomePageStyled from "./HomePageStyled";
 
 const HomePage = (): React.ReactElement => {
   const dispatch = useAppDispatch();
@@ -16,9 +17,11 @@ const HomePage = (): React.ReactElement => {
   }, [dispatch, getUsers]);
 
   return (
-    <main>
-      <UsersList />
-    </main>
+    <HomePageStyled>
+      <main>
+        <UsersList />
+      </main>
+    </HomePageStyled>
   );
 };
 export default HomePage;
