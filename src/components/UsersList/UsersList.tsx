@@ -1,5 +1,6 @@
 import { useAppSelector } from "../../store/hooks";
 import UserCard from "../UserCard/UserCard";
+import UsersListStyled from "./UsersListStyled";
 
 const UsersList = (): React.ReactElement => {
   const users = useAppSelector((state) => {
@@ -7,13 +8,13 @@ const UsersList = (): React.ReactElement => {
   });
 
   return (
-    <ul>
+    <UsersListStyled>
       {users.map((user) => (
         <li key={user.id}>
           <UserCard user={user} />
         </li>
       ))}
-    </ul>
+    </UsersListStyled>
   );
 };
 export default UsersList;
