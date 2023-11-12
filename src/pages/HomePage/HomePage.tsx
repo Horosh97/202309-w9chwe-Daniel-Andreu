@@ -19,6 +19,7 @@ const HomePage = (): React.ReactElement => {
   return (
     <HomePageStyled>
       <main>
+        <h1 className="main-heading">Usuarios añadidos</h1>
         <UsersList />
       </main>
     </HomePageStyled>
