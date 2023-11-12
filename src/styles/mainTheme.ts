@@ -8,9 +8,9 @@ const mainTheme: DefaultTheme = {
   colors: {
     lightColor: "#fff",
     darkColor: "#30343F",
-    mainColor: "#00B4F5",
+    mainColor: "#1EA8FF",
     secondaryColor: "#596475",
-    accentColor: "#EC058E",
+    accentColor: "#DF27F0",
   },
 };
 
