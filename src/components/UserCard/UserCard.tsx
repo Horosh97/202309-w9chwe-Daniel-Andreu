@@ -56,7 +56,7 @@ const UserCard = ({
             className={`${
               isFriend ? "button-activated" : "button-desactivated"
             }`}
-            onSubmit={() => {
+            onClick={() => {
               toggleCardIsFriend(id);
             }}
           >
@@ -67,7 +67,7 @@ const UserCard = ({
             className={`${
               isFriend ? "button-desactivated" : "button-activated"
             }`}
-            onSubmit={() => {
+            onClick={() => {
               toggleCardIsFriend(id);
             }}
           >
