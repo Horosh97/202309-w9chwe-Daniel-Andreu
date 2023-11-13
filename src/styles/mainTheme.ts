@@ -7,10 +7,10 @@ const mainTheme: DefaultTheme = {
   },
   colors: {
     lightColor: "#fff",
-    darkColor: "#30343F",
+    darkColor: "#14161B",
     mainColor: "#1EA8FF",
     secondaryColor: "#596475",
-    accentColor: "#DF27F0",
+    accentColor: "#F7A1FF",
   },
 };
 

@@ -9,7 +9,7 @@ const PageStyled = styled.div`
     font-weight: bold;
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.darkColor};
-    text-shadow: 0.1px 0.1px 5px ${({ theme }) => theme.colors.secondaryColor};
+    text-shadow: 0.1px 0.1px 3px ${({ theme }) => theme.colors.secondaryColor};
   }
 `;
 export default PageStyled;
