@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { UserStructureWithoutId } from "../../store/features/users/types";
+import UserFormStyled from "./UserFormStyled";
 
 interface UserFormProps {
   actionOnSubmit: (movie: UserStructureWithoutId) => void;
@@ -35,7 +36,11 @@ const UserForm = ({ actionOnSubmit }: UserFormProps): React.ReactElement => {
     newUser;
 
   return (
-    <form className="user-form" autoComplete="off" onSubmit={onFormSubmit}>
+    <UserFormStyled
+      className="user-form"
+      autoComplete="off"
+      onSubmit={onFormSubmit}
+    >
       <div className="user-form__block">
         <label className="user-form__label" htmlFor="name">
           Nombre:
@@ -115,7 +120,7 @@ const UserForm = ({ actionOnSubmit }: UserFormProps): React.ReactElement => {
         />
       </div>
       <button type="submit">Enviar</button>
-    </form>
+    </UserFormStyled>
   );
 };
 export default UserForm;
