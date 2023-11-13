@@ -6,7 +6,15 @@ interface UserCardProps {
 }
 
 const UserCard = ({
-  user: { name, username, birthday, quote, profilePicture, interests },
+  user: {
+    name,
+    username,
+    birthday,
+    quote,
+    profilePicture,
+    interests,
+    isFriend,
+  },
 }: UserCardProps): React.ReactElement => {
   return (
     <UserCardStyled className="user">
@@ -29,6 +37,22 @@ const UserCard = ({
         <div className="user__birthday">
           <h3 className="user__birthday-title">Fecha de nacimiento:</h3>
           <span className="user__birthday-info">{birthday}</span>
+        </div>
+        <div className="user__button">
+          <button
+            className={`${
+              isFriend ? "button-activated" : "button-desactivated"
+            }`}
+          >
+            Me cae bien
+          </button>
+          <button
+            className={`${
+              isFriend ? "button-desactivated" : "button-activated"
+            }`}
+          >
+            Me cae mal
+          </button>
         </div>
       </div>
     </UserCardStyled>

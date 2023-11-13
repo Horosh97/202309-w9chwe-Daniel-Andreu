@@ -119,7 +119,9 @@ const UserForm = ({ actionOnSubmit }: UserFormProps): React.ReactElement => {
           onChange={onChangeData}
         />
       </div>
-      <button type="submit">Enviar</button>
+      <button className="user-form__button" type="submit">
+        Añadir usuario
+      </button>
     </UserFormStyled>
   );
 };

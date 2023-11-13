@@ -21,12 +21,20 @@ const UserFormStyled = styled.form`
 
     &__input {
       width: 100%;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 16px;
+      padding-bottom: 16px;
       color: ${({ theme }) => theme.colors.mainColor};
       font-size: 1rem;
       background-color: ${({ theme }) => theme.colors.secondaryColor};
       border-radius: ${({ theme }) => theme.borderRadius};
+      box-shadow: 0 1px 3px ${({ theme }) => theme.colors.darkColor};
+    }
+
+    &__button {
+      padding: 16px;
+      background-color: ${({ theme }) => theme.colors.mainColor};
+      border-radius: ${({ theme }) => theme.borderRadius};
+      box-shadow: 0 1px 3px ${({ theme }) => theme.colors.darkColor};
     }
   }
 `;
