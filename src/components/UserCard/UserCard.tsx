@@ -1,4 +1,7 @@
+import { useDispatch } from "react-redux";
+import useUsersApi from "../../hooks/useUsersApi";
 import { UserStructure } from "../../store/features/users/types";
+import { toggleIsFriendActionCreator } from "../../store/features/users/usersSlice";
 import UserCardStyled from "./UserCardStyled";
 
 interface UserCardProps {
@@ -14,8 +17,17 @@ const UserCard = ({
     profilePicture,
     interests,
     isFriend,
+    id,
   },
 }: UserCardProps): React.ReactElement => {
+  const { setIsFriend } = useUsersApi();
+  const dispatch = useDispatch();
+
+  const toggleCardIsFriend = async (id: number): Promise<void> => {
+    dispatch(toggleIsFriendActionCreator(id));
+    await setIsFriend(id, isFriend);
+  };
+
   return (
     <UserCardStyled className="user">
       <div className="user__left-container">
@@ -40,16 +52,24 @@ const UserCard = ({
         </div>
         <div className="user__button">
           <button
+            type="button"
             className={`${
               isFriend ? "button-activated" : "button-desactivated"
             }`}
+            onSubmit={() => {
+              toggleCardIsFriend(id);
+            }}
           >
             Me cae bien
           </button>
           <button
+            type="button"
             className={`${
               isFriend ? "button-desactivated" : "button-activated"
             }`}
+            onSubmit={() => {
+              toggleCardIsFriend(id);
+            }}
           >
             Me cae mal
           </button>

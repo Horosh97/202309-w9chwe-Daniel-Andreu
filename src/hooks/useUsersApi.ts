@@ -35,9 +35,30 @@ const useUsersApi = () => {
       return returnedUserFromApi;
     }
   };
+  const setIsFriend = useCallback(
+    async (userId: number, isFriend: boolean): Promise<void> => {
+      try {
+        const response = await fetch(`${apiUrl}/${userId}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ isFriend: !isFriend }),
+        });
+
+        if (!response.ok) {
+          throw new Error();
+        }
+      } catch {
+        throw new Error();
+      }
+    },
+    [],
+  );
   return {
     getUsers,
     addNewUser,
+    setIsFriend,
   };
 };
 
