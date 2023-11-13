@@ -98,6 +98,27 @@ const UserCardStyled = styled.article`
     &__birthday-info {
       color: ${({ theme }) => theme.colors.darkColor};
     }
+
+    &__button {
+      display: flex;
+      margin: 5px;
+      padding: 5px 16px;
+      font-size: 3.5cqw;
+      justify-content: space-around;
+      background-color: ${({ theme }) => theme.colors.lightColor};
+      border-radius: ${({ theme }) => theme.borderRadius};
+      box-shadow: 0 1px 3px ${({ theme }) => theme.colors.darkColor};
+    }
+  }
+
+  .button-activated {
+    color: ${({ theme }) => theme.colors.mainColor};
+    font-weight: bold;
+    text-shadow: 0.1px 0.1px 3px ${({ theme }) => theme.colors.secondaryColor};
+  }
+
+  .button-desactivated {
+    color: ${({ theme }) => theme.colors.secondaryColor};
   }
 `;
 export default UserCardStyled;
